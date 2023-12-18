@@ -5,6 +5,10 @@ const table = document.querySelector('table');
 
 
 
+
+
+
+
 btn.addEventListener('click', function(event){
     event.preventDefault();
     addBookToLibrary();
@@ -26,11 +30,10 @@ function addBookToLibrary(){
     let bookTitle = document.getElementById('title').value;
     let bookAuthor = document.getElementById('author').value;
     let bookPages = document.getElementById('pages').value;
-    let bookStatus = document.getElementById('status').value;
+    let bookStatus = document.querySelector('input[name="status"]:checked').value;
 
     let book1 = new Book(bookTitle, bookAuthor, bookPages, bookStatus);
     myLibrary.push(book1);
-    console.table(book1);
 
 }
 
@@ -41,7 +44,7 @@ function removeInput(){
 
 }
 
-const bookPreview = new Book('Eragon', 'Christopher Paolini', 509, 'read');
+
 
 let i = 0;
 
@@ -53,15 +56,30 @@ function setObjTable(){
         const authorName = document.createElement('td');
         const pageNumber = document.createElement('td');
         const statusBinary = document.createElement('td');
+        const statusBtn = document.createElement('button');
+        statusBtn.classList.add('binary');
         newRow.appendChild(titleName);
         newRow.appendChild(authorName);
         newRow.appendChild(pageNumber);
-        newRow.appendChild(statusBinary);
+        newRow.appendChild(statusBinary)
+        statusBinary.appendChild(statusBtn);
 
 
         titleName.textContent = myLibrary[i].title;
         authorName.textContent = myLibrary[i].author;
         pageNumber.textContent = myLibrary[i].pages;
-        statusBinary.textContent = myLibrary[i].status;
+        statusBtn.textContent = myLibrary[i].status;
+    }
+}
+
+let readOrNotBtn = document.querySelector('.binary');
+
+readOrNotBtn.addEventListener('click', toggleRead);
+
+function toggleRead(){
+    if(readOrNotBtn.textContent == 'Read'){
+        readOrNotBtn.textContent = 'Not Read';
+    } else {
+        readOrNotBtn.textContent = 'Read';
     }
 }
