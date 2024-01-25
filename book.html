@@ -4,55 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="book.css">
     <script src="book.js" defer></script>
+    <link rel="stylesheet" href="book.css">
 </head>
 <body>
     <div class="container">
-        <h1>Book Database</h1>
-        <div class="inputbox">
-            <div class="textbox">
-                <form>
-                    <div class="book title">
-                        <label for="title">Title:</label>
-                        <input type="text" id="title" name="title" required>
-                    </div>
-                    <div class="book author">
-                        <label for="author">Author:</label>
-                        <input type="text" id="author" name="author" required>
-                    </div>
-                    <div class="book pages">
-                        <label for="pages">Pages:</label>
-                        <input type="number" id="pages" name="pages">
-                    </div>
-                    <div class="book status">
-                        <label for="status">Status:</label>
-                        <div><input type="radio" id="status" name="status" value="Read">Read</div>
-                        <div><input type="radio" id="status" name="status" value="not-read">Not Read</div>
-                    </div>
-                    <div class="button"><button id="submit">Submit</button></div>
-                </form>
-                </div>
-                <div class="table-container">
-                    <table>
-                        <tr>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Pages</th>
-                            <th>Status</th>
-                        </tr> 
-                        <tr>
-                            <td>Eragon</td>
-                            <td>Christopher Paolini</td>
-                            <td>509</td>
-                            <td><button class="binary">Read</button></td>
-                        </tr>
-                    </table>
-                </div>     
-            </div>
-            
+        <h1>Library Project</h1>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Harry Potter</td>
+                    <td>J.K. Rowling</td>
+                    <td>343</td>
+                    <td>Read</td>
+                </tr>
+            </table>
         </div>
     </div>
-    
 </body>
 </html>
