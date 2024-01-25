@@ -11,6 +11,28 @@
     <div class="container">
         <h1>Library Project</h1>
         <div class="table-container">
+            <form>
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                <div>
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" name="pages">
+                </div>
+                <div>
+                    <label for="status">Status</label>
+                    
+                        <input type="radio" id="status" name="read">Read
+                        <input type="radio" id="status" name="unread">Unread
+                    
+                </div>
+                <button type="submit">Add</button>
+            </form>
             <table>
                 <tr>
                     <th>Title</th>
