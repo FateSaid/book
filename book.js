@@ -13,7 +13,7 @@ function addBookToLibrary(){
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
-    const status = document.getElementById('status').value;
+    const status = document.querySelector('input[name="status"]:checked').value;
     const book1 = new Book(title, author, pages, status);
     myLibrary.push(book1);
     
