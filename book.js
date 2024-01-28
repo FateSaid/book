@@ -7,9 +7,6 @@ function Book(title, author, pages, status){
     this.status = status;
 }
 
-Book.prototype.display = function(){
-    return `${this.title} is written by ${this.author}, which has ${this.pages} and status is ${this.status}`
-}
 
 function addBookToLibrary(){
     //do stuff here
