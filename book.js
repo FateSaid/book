@@ -19,7 +19,13 @@ function addBookToLibrary(){
 
     
     const book1 = new Book(title, author, pages, status);
-    myLibrary.push(book1);
+    if(book1.title == '' || book1.author == ''){
+        alert('Please fill out the boxes with *')
+        return false;
+    } else{
+       myLibrary.push(book1); 
+    }
+    
     function addToRow(){
         const tbody = document.querySelector('tbody');
         const row = document.createElement('tr');
@@ -42,21 +48,9 @@ function deleteInput(){
     pages.value = '';
 }
 
-function validateForm(){
-    const form = document.querySelector('form');
-    if(form.checkValidity()){
-        return true;
-    } else{
-        form.reportValidity();
-        return false;
-    }
-}
-
-
-const btn = document.querySelector('button');
+const btn = document.querySelector('button[type="submit"]');
 btn.addEventListener('click', function(e){
     e.preventDefault();
     addBookToLibrary();
     deleteInput();
-    validateForm();
 })
