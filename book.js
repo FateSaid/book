@@ -1,11 +1,10 @@
 const myLibrary = [];
 
 
-function Book(title, author, pages, status){
+function Book(title, author, pages){
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.status = status;
 }
 
 
@@ -16,9 +15,8 @@ function addBookToLibrary(){
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
     const status = document.querySelector('input[name="status"]:checked').value;
-
     
-    const book1 = new Book(title, author, pages, status);
+    const book1 = new Book(title, author, pages);
     if(book1.title == '' || book1.author == ''){
         alert('Please fill out the boxes with *')
         return false;
@@ -35,8 +33,29 @@ function addBookToLibrary(){
             td.textContent = book1[key];
             row.appendChild(td);
         }
+       function addToggle(){
+        const readOrNot = document.createElement('button');
+        readOrNot.classList.add('toggle');
+        readOrNot.textContent = status;
+        row.appendChild(readOrNot);
+        readOrNot.addEventListener('click', function(){
+            if(readOrNot.textContent === 'Read'){
+                readOrNot.textContent = 'Unread';
+            } else{
+                readOrNot.textContent = 'Read';
+            }   
+        });
+        }
+        addToggle();
         
+        
+
+ 
     }
+
+    
+
+    
     if(addToRow == undefined)return false;
     else addToRow();
 
@@ -53,4 +72,9 @@ btn.addEventListener('click', function(e){
     e.preventDefault();
     addBookToLibrary();
     deleteInput();
-})
+});
+
+const defaultBtn = document.querySelector('.toggle');
+defaultBtn.addEventListener('click', function(){
+    defaultBtn.textContent = (defaultBtn.textContent === 'Read') ? 'Unread' : 'Read';
+});
