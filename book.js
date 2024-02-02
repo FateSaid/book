@@ -35,9 +35,11 @@ function addBookToLibrary(){
         }
        function addToggle(){
         const readOrNot = document.createElement('button');
+        const tdForBtn = document.createElement('td');
         readOrNot.classList.add('toggle');
         readOrNot.textContent = status;
-        row.appendChild(readOrNot);
+        row.appendChild(tdForBtn);
+        
         readOrNot.addEventListener('click', function(){
             if(readOrNot.textContent === 'Read'){
                 readOrNot.textContent = 'Unread';
@@ -45,6 +47,7 @@ function addBookToLibrary(){
                 readOrNot.textContent = 'Read';
             }   
         });
+        tdForBtn.appendChild(readOrNot);
         }
         addToggle();
         

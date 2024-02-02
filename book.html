@@ -10,35 +10,34 @@
 <body>
     <div class="container">
         <h1>Library Project</h1>
-        <div class="table-container">
-            <form>
-                <div>
-                    <label for="title">*Title</label>
-                    <input type="text" id="title" name="title" required>
-                </div>
-                <div>
-                    <label for="author">*Author</label>
-                    <input type="text" id="author" name="author" required>
-                </div>
-                <div>
-                    <label for="pages">Pages</label>
-                    <input type="number" id="pages" name="pages" required>
-                </div>
-                <div>
-                    <label for="status">*Status</label>
+        <form>
+            <div>
+                <label for="title">*Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="author">*Author</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+            <div>
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" name="pages" required>
+            </div>
+            <div>
+                <label for="status">*Status</label>
                     
-                        <input type="radio" id="status" name="status" value="Read" required checked>Read
-                        <input type="radio" id='status' name="status" value ='Unread' required>Unread
+                    <input type="radio" id="status" name="status" value="Read" required checked>Read
+                    <input type="radio" id='status' name="status" value ='Unread' required>Unread
                     
-                </div>
-                <button type="submit">Add</button>
-            </form>
-            <table>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+            <table id="library">
                 <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Pages</th>
-                    <th>Status</th>
+                    <th style="width:40%">Title</th>
+                    <th style="width:20%">Author</th>
+                    <th style="width:20%">Pages</th>
+                    <th style="width:10%">Status</th>
                 </tr>
                 <tr>
                     <td>Harry Potter</td>
@@ -48,6 +47,5 @@
                 </tr>
             </table>
         </div>
-    </div>
 </body>
 </html>

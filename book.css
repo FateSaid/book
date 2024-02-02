@@ -1,47 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
-
-html, body{
+*{
     margin:0;
     padding:0;
-    height:100%;
     box-sizing: border-box;
-    font-family:'Goudy Booklitter 1911', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-h1{
-    font-size:3rem;
-    grid-column-start:2;
-    grid-column-end:3;
-    font-family:'Goudy Bookletter 1911';
 }
 
 .container{
-    height:100%;
-    display:grid;
-    grid-template: 1fr 1fr 1fr / 1fr 3fr 1fr;
-    text-align:center;
-}
-.table-container{
-    background-color: lightblue;
-    grid-column-start:2;
-    grid-column-end:3;
-    grid-row-start:2;
-    grid-row-end:3;
-    min-width:956px;
-}
-
-table{
+    width:100%;
     display:flex;
+    flex-direction:column;
+    align-items:center;
     justify-content:space-around;
+    height:50%;
 }
 
-th{
-    width:400px;
-    border-bottom:2px solid black;
+h1{
+    margin:50px;
+}
+
+
+label{
+    display:inline-block;
+    width:100px;
+    padding:10px;
+    text-align:right;
 }
 
 form{
-    display:flex;
-    justify-content:space-around;
     padding:10px;
+    border:3px solid brown;
+}
+
+#library{
+    width:50%;
+    text-align:center;
+}
+
+table{
+    margin:100px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid #000;
+    padding:10px 15px;
 }
