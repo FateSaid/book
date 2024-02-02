@@ -39,6 +39,15 @@ function addBookToLibrary(){
         readOrNot.classList.add('toggle');
         readOrNot.textContent = status;
         row.appendChild(tdForBtn);
+
+        const deleteBtn = document.createElement('button');
+        const deleteBtnTd = document.createElement('td');
+        deleteBtnTd.appendChild(deleteBtn);
+        deleteBtn.textContent = 'Remove';
+        row.appendChild(deleteBtnTd);
+        deleteBtn.addEventListener('click', function(){
+            row.remove();
+        })
         
         readOrNot.addEventListener('click', function(){
             if(readOrNot.textContent === 'Read'){

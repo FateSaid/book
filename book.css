@@ -41,7 +41,17 @@ table{
     border-collapse: collapse;
 }
 
+table th{
+    color:white;
+    background-color: #475569;
+    padding:8px;
+  }
+
 th, td{
     border: 1px solid #000;
     padding:10px 15px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
 }
