@@ -35,12 +35,14 @@ function addBookToLibrary(){
         }
        function addToggle(){
         const readOrNot = document.createElement('button');
+        readOrNot.classList.add('status');
         const tdForBtn = document.createElement('td');
         readOrNot.classList.add('toggle');
         readOrNot.textContent = status;
         row.appendChild(tdForBtn);
 
         const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add('delete');
         const deleteBtnTd = document.createElement('td');
         deleteBtnTd.appendChild(deleteBtn);
         deleteBtn.textContent = 'Remove';
