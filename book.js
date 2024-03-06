@@ -1,23 +1,26 @@
 const myLibrary = [];
 
 
-function Book(title, author, pages){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
+class Book {
+    constructor(title, author, pages) {
+
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+
+
+    }
 }
 
 
 function addBookToLibrary(){
-    //do stuff here
-
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
     const status = document.querySelector('input[name="status"]:checked').value;
     
     const book1 = new Book(title, author, pages);
-    if(book1.title == '' || book1.author == ''){
+    if(title == '' || book1.author == ''){
         alert('Please fill out the boxes with *')
         return false;
     } else{
